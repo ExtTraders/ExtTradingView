@@ -1,0 +1,5 @@
+Flask==2.0.3
+ccxt==1.60.0
+pyupbit==0.2.5
+line-alert==0.1.0
+```
