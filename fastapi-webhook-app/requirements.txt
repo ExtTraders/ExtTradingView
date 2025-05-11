@@ -1,0 +1,6 @@
+FastAPI
+uvicorn
+ccxt
+pyupbit
+pydantic
+python-dotenv
