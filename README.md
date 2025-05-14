@@ -3,6 +3,8 @@
 # How to Start
 ```bash
 pip install ccxt
+
+pip install fastapi uvicorn
 ```
 
 # Server Setup

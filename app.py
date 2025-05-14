@@ -49,8 +49,10 @@ async def webhook(data: WebhookData):
 
         # 바이낸스 처리
         elif data.dist == "binance":
-            Binance_AccessKey = simpleEnDecrypt.decrypt(my_key.binance_access)
-            Binance_ScretKey = simpleEnDecrypt.decrypt(my_key.binance_secret)
+            tmp = simpleEnDecrypt.encrypt(my_key.binance_access)
+            Binance_AccessKey = simpleEnDecrypt.decrypt(tmp)
+            tmp = simpleEnDecrypt.encrypt(my_key.binance_secret)
+            Binance_ScretKey = simpleEnDecrypt.decrypt(tmp)
             binanceX = ccxt.binance({
                 'apiKey': Binance_AccessKey,
                 'secret': Binance_ScretKey,
@@ -63,6 +65,20 @@ async def webhook(data: WebhookData):
                     response = binanceX.create_order(data.ticker, 'market', 'buy', data.amt)
                 elif data.side == "short":
                     response = binanceX.create_order(data.ticker, 'market', 'sell', data.amt)
+            elif data.type == "future":
+                if data.side == "long":
+                    binanceX.load_markets()
+                    response = binanceX.set_leverage(5,symbol="XRP/USDT")
+                    print(response)
+                    response = binanceX.set_margin_mode(marginMode='cross', symbol="XRP/USDT")
+                    print(response)
+                    resp = exchange.create_market_sell_order(
+                        symbol=symbol,
+                        amount=50,
+                        params=params
+)
+                elif data.side == "short":
+                    response = binanceX.create_order(data.ticker, 'market', 'sell', data.amt)
             elif data.type == "limit":
                 if data.side == "long":
                     response = binanceX.create_order(data.ticker, 'limit', 'buy', data.amt, data.price_money)
@@ -72,6 +88,8 @@ async def webhook(data: WebhookData):
                 response = binanceX.cancel_all_orders(data.ticker)
             elif data.type == "stop":
                 response = myBinance.SetStopLoss(binanceX, data.ticker, data.etc_num, False)
+                
+            
 
         # 바이비트 처리
         # elif data.dist == "bybit":
