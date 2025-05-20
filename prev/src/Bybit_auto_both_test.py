@@ -23,8 +23,8 @@ import pandas as pd
 import pprint
 
 import myBybit
-import ende_key  #암복호화키
-import my_key    #업비트 시크릿 액세스키
+import keys.ende_key as ende_key  #암복호화키
+import keys.my_key as my_key    #업비트 시크릿 액세스키
 
 #암복호화 클래스 객체를 미리 생성한 키를 받아 생성한다.
 simpleEnDecrypt = myBybit.SimpleEnDecrypt(ende_key.ende_key)

@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify
 import json
 import ccxt
-import my_key
-import ende_key
-import myBinance
+import keys.my_key as my_key
+import keys.ende_key as ende_key
+import services.myBinance as myBinance
 
 app = Flask(__name__)
 

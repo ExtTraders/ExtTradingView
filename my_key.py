@@ -52,5 +52,5 @@ print("scret_key: ", simpleEnDecrypt.encrypt(secret))
 upbit_access = "gAAAAABhHynXP_5VsBAOYlfea10cwe34wcs3tpcTnqp1bpkg0YoNNl2RFvgf5m23UQS2VaCyxCUx9GUZgua4IKjBI1an0dYeA2iWxnPiz2ioTmzXfdj1Iq7hbYuzacSazXqrNef1_XM"          # 본인 값으로 변경
 upbit_secret = "gAAAABfgyoC6DsPtHr89Y9icIWZhEks0DeMLrsqaERI2vVE6d_kZi50JBOcthIshxEb7F-s0_3QiZmlM87K7ZmEs9yskevVy5P2BcYTypKh16Kf64Bxa117nJtHfgfICWmlcN__"          # 본인 값으로 변경
 
-binance_access = "lDj2oMOnwOsKCZVggJ2QPINoVX7znJOg6eJxCeAZGbL8wDEDQfvxRFl5jz1xNGOR"          # 본인 값으로 변경
-binance_secret = "kNK9mcW5N5EPr4KXWPAH43tecfbT8KvEiKFpoxp6PAeYHLjg47vjcGFm1JfNqwT2"
+binance_access = "gAAAAABoLHT_qx__omS4PMnLlri3bwcMqhq_9QW3z_9aGbkV9IdO31cbytwCywVdqcJQ_i1NUJd69aB8dFD_gRnEIgraSydqR1ZOFaGFgWhX5iEgJ0zYv_ii5QzKLGFmn_btnYRpWin3Zz9ed3gqPflzv5e1xKyW1WXxdK-nbpmphwOPNs8IhW4="          # 본인 값으로 변경
+binance_secret = "gAAAAABoLHT_OpR-YRNgKSEZpYH5dFW16ajych7RtolgPiXFpHpTgNmCJ9yuDjUerL1_69kRBQGcq4k7EupIYJnz_ADNUAgXf7FaTFGQRMFMuyth4r9J_5rnyXgc1yROyPXe-6cTfPlECl-Z7jZTWQ6YlRA8IYKWqSwo2jjlbqeabX7WfQnghfY="
