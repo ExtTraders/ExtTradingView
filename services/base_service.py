@@ -6,6 +6,8 @@ class BaseService:
         self.encryption = SimpleEnDecrypt(encryption_key)
         self.access_key = self.encryption.decrypt(access_key)
         self.secret_key = self.encryption.decrypt(secret_key)
+        # self.access_key = access_key
+        # self.secret_key = secret_key
 
     def create_exchange(self, exchange_name, options=None):
         if exchange_name == "binance":

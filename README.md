@@ -32,3 +32,17 @@ pip3 install cctx
 
 # 참고소스
 https://blog.naver.com/PostView.naver?blogId=zacra&logNo=222638332849
+
+# 키 암호화
+```
+pip install jupyter
+jupyter notebook
+```
+
+# 패키지 뽑고 설치하기
+```
+pip freeze > requirements.txt
+---
+pip install --upgrade pip
+pip install -r requirements.txt
+```

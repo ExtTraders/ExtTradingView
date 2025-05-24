@@ -14,16 +14,16 @@ app = FastAPI()
 @app.post("/webhook")
 async def webhook(data: WebhookData):
     try:
-        if data.dist == "binance":
+        if data.exchange == "binance":
             service = BinanceService(my_key.binance_access, my_key.binance_secret, ende_key.ende_key)
-        elif data.dist == "upbit":
+        elif data.exchange == "upbit":
             service = UpbitService(my_key.upbit_access, my_key.upbit_secret, ende_key.ende_key)
-        elif data.dist == "bybit":
+        elif data.exchange == "bybit":
             service = BybitService(my_key.bybit_access, my_key.bybit_secret, ende_key.ende_key)
-        elif data.dist == "tbybit":
+        elif data.exchange == "tbybit":
             service = BybitService(my_key.bybit_test_access, my_key.bybit_test_secret, ende_key.ende_key)
         else:
-            raise HTTPException(status_code=400, detail="Unsupported 'dist' value")
+            raise HTTPException(status_code=400, detail="Unsupported 'exchange' value")
 
         # 주문 처리
         response = service.place_order(data)

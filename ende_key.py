@@ -10,4 +10,4 @@ Key = Fernet.generate_key()
 print(Key)
 
 '''
-ende_key = b'Maomx_Uhf-y4godZ_Q7TH-n9kcr1oTqjehhylGMj_Lg='
+ende_key = b'PUGYnyStZ0T_ujxskqMoewg2W1iuCp2m8LiQl0fntN8='

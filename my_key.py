@@ -7,14 +7,14 @@
 upbit_access = ""          # 본인 값으로 변경
 upbit_secret = ""          # 본인 값으로 변경
 
-binance_access = "gAAAAABoLHT_qx__omS4PMnLlri3bwcMqhq_9QW3z_9aGbkV9IdO31cbytwCywVdqcJQ_i1NUJd69aB8dFD_gRnEIgraSydqR1ZOFaGFgWhX5iEgJ0zYv_ii5QzKLGFmn_btnYRpWin3Zz9ed3gqPflzv5e1xKyW1WXxdK-nbpmphwOPNs8IhW4="          # 본인 값으로 변경
-binance_secret = "gAAAAABoLHT_OpR-YRNgKSEZpYH5dFW16ajych7RtolgPiXFpHpTgNmCJ9yuDjUerL1_69kRBQGcq4k7EupIYJnz_ADNUAgXf7FaTFGQRMFMuyth4r9J_5rnyXgc1yROyPXe-6cTfPlECl-Z7jZTWQ6YlRA8IYKWqSwo2jjlbqeabX7WfQnghfY="
+binance_access = "gAAAAABoMZfPJP3fTbBGt0n2Wcgdi-MO70afmNrkEljsu7r72I0fm7DhmLb1y1K84a6SmGDT_s5ugFshDpaUBEc5-qNGeB5dYHt2LGjR1nrIvV3apMcp6kPWOX4q_uTFmeqPcrwpxSGj-JmWksdfqXD7lqb5rbH4VFE5QEkPy5sqS42fmxzV2JE="
+binance_secret = " gAAAAABoMZfPWvHlnX1eYPN5jOkbirlyETjyCS4Whx2E70ZTEmyWLc8UybEToMQiEGKP2qO0xarxfBllnGpp1_1AplLgKSjUUh06dH1yeQ6URG79cO8eagRYXswT1XLSY2B01ImK8CDY06l11yhmcwSSyWVcIspD-JTLJbj5B-t-zuzbsHFPM9s="
 
-bybit_access = "gAAAAABoMThbpbezOsxlQkylLhuMMgfX9od9EBtjPoVywCfI0JCZHefjXeruAlN7zbbL2nNptcMAaWYohW7PefE95TYuKORuIm7WXMCeF-3JzqyUv7CvWXI="
-bybit_secret = "gAAAAABoMThbJ8pmknXww2Q8TqcOPBj4mw1NEBoxN9fXRMnUybq-kgKqbdtmm-Jxzs1FEXkD5acj5w01E_jYV4jLemnIw29AS5fVJ3M7nLQBaOhP52O7EgjaIiVt4qaQMlzdJvH_-zOv"
+bybit_access = "gAAAAABoMZs2cCorWKqRww0Lo-GzKpZFzFmx0qNU_pzDVe9IJOj-QAO3GFJ6z7NJCA4viTm_qH8Qte20O1gJotQ3xDez4DWUiTvl4oLrfoIfxJdOT_XTyx4="
+bybit_secret = "gAAAAABoMZs2sk7n9Z_3uE43aGkoFw99sr8ZSnYlaxSKmPL37lsPh_06-lk5PIgt-SsTgAYfZmwyZ-auIZVU7CecadvUhjPWE9ugttaI6kuQPP-CGQRRU85G8PvUuzuz-QJlFtyAUgdn"
 
-bybit_test_access = "gAAAAABoMXukp_rQFxsJ9iKeyvKSXJsOpOF2M65oVTNTkmnaW2E9S-QFzyxW3PHWIyPqqMmfW4DSjbUB6BzEaXemQ_1gaqsZWYxUW7mlUvrA8iiKOb8GZn4="
-bybit_test_secret = "gAAAAABoMXukYlDU8R76kZACrLpNqtHIfqUqmPnXDALTARHHTlSqYFrBkGCJ0_m08ocrkS2oVLexGL1TwJCJUFwM6Hbgn21YCOh9Wz5lAkws9FO9zMpd1RxkyIVUSkm5FeNTUmVhW1Ej"
+bybit_test_access = "tnD5L9GELr8LaJj5Ax"
+bybit_test_secret = "pvuHSQRXviblmzS43mH6y38ME3Flc1OAowkF"
 '''
 여러분의 시크릿 키와 엑세스 키를 
 ende_key.py에 있는 키를 활용해서 암호화한 값을 넣으세요

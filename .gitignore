@@ -9,6 +9,9 @@ __pycache__/
 # Strategy
 strategy/
 
+# ETC
+upbit_auto_bot_7-1.zip
+
 # Distribution / packaging
 .Python
 build/
