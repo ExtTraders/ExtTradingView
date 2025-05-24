@@ -105,43 +105,44 @@ async def webhook(data: WebhookData):
                 
             
 
-        # 바이비트 처리
-        # elif data.dist == "bybit":
-        #     Bybit_AccessKey = simpleEnDecrypt.decrypt(my_key.bybit_access)
-        #     Bybit_ScretKey = simpleEnDecrypt.decrypt(my_key.bybit_secret)
-        #     bybitX = ccxt.bybit({
-        #         'apiKey': Bybit_AccessKey,
-        #         'secret': Bybit_ScretKey,
-        #         'enableRateLimit': True,
-        #         'options': {'defaultType': 'future'}
-        #     })
+        #바이비트 처리
+        elif data.dist == "bybit":
+            Bybit_AccessKey = simpleEnDecrypt.decrypt(my_key.bybit_access)
+            Bybit_ScretKey = simpleEnDecrypt.decrypt(my_key.bybit_secret)
+            bybitX = ccxt.bybit({
+                'apiKey': Bybit_AccessKey,
+                'secret': Bybit_ScretKey,
+                'enableRateLimit': True,
+                'options': {'defaultType': 'future'}
+            })
 
-        #     if data.type == "market":
-        #         if data.etc_str == "open":
-        #             if data.side == "long":
-        #                 response = bybitX.create_order(data.ticker, 'market', 'buy', data.amt, None, {'position_idx': 1})
-        #             elif data.side == "short":
-        #                 response = bybitX.create_order(data.ticker, 'market', 'sell', data.amt, None, {'position_idx': 2})
-        #         elif data.etc_str == "close":
-        #             if data.side == "long":
-        #                 response = bybitX.create_order(data.ticker, 'market', 'buy', data.amt, None, {'position_idx': 1, 'reduce_only': True, 'close_on_trigger': True})
-        #             elif data.side == "short":
-        #                 response = bybitX.create_order(data.ticker, 'market', 'sell', data.amt, None, {'position_idx': 2, 'reduce_only': True, 'close_on_trigger': True})
-        #     elif data.type == "limit":
-        #         if data.etc_str == "open":
-        #             if data.side == "long":
-        #                 response = bybitX.create_order(data.ticker, 'limit', 'buy', data.amt, data.price_money, {'position_idx': 1})
-        #             elif data.side == "short":
-        #                 response = bybitX.create_order(data.ticker, 'limit', 'sell', data.amt, data.price_money, {'position_idx': 2})
-        #         elif data.etc_str == "close":
-        #             if data.side == "long":
-        #                 response = bybitX.create_order(data.ticker, 'limit', 'buy', data.amt, data.price_money, {'position_idx': 1, 'reduce_only': True, 'close_on_trigger': True})
-        #             elif data.side == "short":
-        #                 response = bybitX.create_order(data.ticker, 'limit', 'sell', data.amt, data.price_money, {'position_idx': 2, 'reduce_only': True, 'close_on_trigger': True})
-        #     elif data.type == "cancel":
-        #         response = myBybit.CancelAllOrder(bybitX, data.ticker)
-        #     elif data.type == "stop":
-        #         response = myBybit.SetStopLoss(bybitX, data.ticker, data.etc_num, False)
+            if data.type == "market":
+                if data.etc_str == "open":
+                    if data.side == "long":
+                        response = bybitX.create_order(data.ticker, 'market', 'buy', data.amt, None, {'position_idx': 1})
+                    elif data.side == "short":
+                        response = bybitX.create_order(data.ticker, 'market', 'sell', data.amt, None, {'position_idx': 2})
+                elif data.etc_str == "close":
+                    if data.side == "long":
+                        response = bybitX.create_order(data.ticker, 'market', 'buy', data.amt, None, {'position_idx': 1, 'reduce_only': True, 'close_on_trigger': True})
+                    elif data.side == "short":
+                        response = bybitX.create_order(data.ticker, 'market', 'sell', data.amt, None, {'position_idx': 2, 'reduce_only': True, 'close_on_trigger': True})
+                        
+            elif data.type == "limit":
+                if data.etc_str == "open":
+                    if data.side == "long":
+                        response = bybitX.create_order(data.ticker, 'limit', 'buy', data.amt, data.price_money, {'position_idx': 1})
+                    elif data.side == "short":
+                        response = bybitX.create_order(data.ticker, 'limit', 'sell', data.amt, data.price_money, {'position_idx': 2})
+                elif data.etc_str == "close":
+                    if data.side == "long":
+                        response = bybitX.create_order(data.ticker, 'limit', 'buy', data.amt, data.price_money, {'position_idx': 1, 'reduce_only': True, 'close_on_trigger': True})
+                    elif data.side == "short":
+                        response = bybitX.create_order(data.ticker, 'limit', 'sell', data.amt, data.price_money, {'position_idx': 2, 'reduce_only': True, 'close_on_trigger': True})
+            elif data.type == "cancel":
+                response = myBybit.CancelAllOrder(bybitX, data.ticker)
+            elif data.type == "stop":
+                response = myBybit.SetStopLoss(bybitX, data.ticker, data.etc_num, False)
 
         else:
             raise HTTPException(status_code=400, detail="Unsupported 'dist' value")

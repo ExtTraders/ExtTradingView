@@ -4,8 +4,12 @@ import ccxt
 class BaseService:
     def __init__(self, access_key, secret_key, encryption_key):
         self.encryption = SimpleEnDecrypt(encryption_key)
-        self.access_key = self.encryption.decrypt(access_key)
-        self.secret_key = self.encryption.decrypt(secret_key)
+        tmp = self.encryption.encrypt(access_key)
+        self.access_key = self.encryption.decrypt(tmp)
+        print(self.access_key)
+        tmp = self.encryption.encrypt(secret_key)
+        self.secret_key = self.encryption.decrypt(tmp)
+        print(self.secret_key)
 
     def create_exchange(self, exchange_name, options=None):
         if exchange_name == "binance":

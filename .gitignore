@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Strategy
+strategy/
+
 # Distribution / packaging
 .Python
 build/

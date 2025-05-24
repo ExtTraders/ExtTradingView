@@ -54,3 +54,6 @@ upbit_secret = "gAAAABfgyoC6DsPtHr89Y9icIWZhEks0DeMLrsqaERI2vVE6d_kZi50JBOcthIsh
 
 binance_access = "gAAAAABoLHT_qx__omS4PMnLlri3bwcMqhq_9QW3z_9aGbkV9IdO31cbytwCywVdqcJQ_i1NUJd69aB8dFD_gRnEIgraSydqR1ZOFaGFgWhX5iEgJ0zYv_ii5QzKLGFmn_btnYRpWin3Zz9ed3gqPflzv5e1xKyW1WXxdK-nbpmphwOPNs8IhW4="          # 본인 값으로 변경
 binance_secret = "gAAAAABoLHT_OpR-YRNgKSEZpYH5dFW16ajych7RtolgPiXFpHpTgNmCJ9yuDjUerL1_69kRBQGcq4k7EupIYJnz_ADNUAgXf7FaTFGQRMFMuyth4r9J_5rnyXgc1yROyPXe-6cTfPlECl-Z7jZTWQ6YlRA8IYKWqSwo2jjlbqeabX7WfQnghfY="
+
+bybit_access = "WXqhVrILLkl3E9s0aT"
+bybit_secret = "LwX8gqcw1MLTt5AbyG71rhbF8Pymgd7qABuF"
