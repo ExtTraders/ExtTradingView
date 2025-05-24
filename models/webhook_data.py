@@ -1,4 +1,4 @@
-from pydantic import BaseMode
+from pydantic import BaseModel
 
 '''
 TVM:{

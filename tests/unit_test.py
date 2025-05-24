@@ -9,6 +9,13 @@ from utils.encryption import SimpleEnDecrypt
 
 client = TestClient(app)
 
+def test_msgtest():
+    payload = {"msg": "hello"}
+    response = client.post("/msgtest", json=payload)
+    assert response.status_code == 200
+    assert response.json()["success"] is True
+    assert "Message received" in response.json()["message"]
+
 def test_webhook_binance(monkeypatch):
     monkeypatch.setattr("services.binance_service.BinanceService", BinanceService)
     monkeypatch.setattr("utils.alert.send_alert", lambda msg: None)

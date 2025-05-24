@@ -8,6 +8,8 @@ from services.showEncryptAccessKey import showEncryptAccessKey
 from utils.alert import send_alert
 import my_key
 import ende_key
+import logging
+from datetime import datetime
 
 app = FastAPI()
 
@@ -32,6 +34,24 @@ async def webhook(data: WebhookData):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+@app.post("/msgtest")
+async def msgtest(request: dict):
+
+    # 로그 파일 설정
+    logging.basicConfig(
+        filename="./msgtest.log",
+        level=logging.INFO,
+        format="%(asctime)s %(message)s"
+    )
+
+    # 메시지 출력
+    print("Received message:", request)
+
+    # 로그 파일에 기록
+    logging.info(f"Received message: {request}")
+
+    return {"success": True, "message": "Message received and logged."}
     
 @app.post("/encrypt")
 async def encrypt(data: EncryptData):
